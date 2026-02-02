@@ -1,0 +1,133 @@
+
+    :root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --primary: #3b82f6;
+  --low: #4ade80;
+  --medium: #fbbf24;
+  --high: #f87171;
+    }
+
+    * { box-sizing: border-box; font-family: system-ui, sans-serif; }
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 520px;
+      background: var(--card);
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 30px 60px rgba(0,0,0,.6);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .form {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .form input,
+    .form select {
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      background: #020617;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .form button {
+      padding: 14px;
+      border-radius: 14px;
+      border: none;
+      background: var(--primary);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    ul { list-style: none; padding: 0; margin: 0; }
+
+    li {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 16px;
+      padding: 14px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    li.done {
+      opacity: .6;
+      text-decoration: line-through;
+    }
+
+    .todo-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title {
+      font-size: 17px;
+      font-weight: 600;
+    }
+
+    .priority {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #020617;
+    }
+
+    .priority.low { background: var(--low); }
+    .priority.medium { background: var(--medium); }
+    .priority.high { background: var(--high); }
+
+    .info {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .actions button {
+      background: transparent;
+      border: 1px solid #1e293b;
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 22px; }
+      .app { padding: 18px; }
+    }
